@@ -1,2 +1,2 @@
 # meteor-first-user-admin
-Add the first Meteor user to the admin role.
+Adds methods to create an admin role and add the first Meteor user to the admin role.
