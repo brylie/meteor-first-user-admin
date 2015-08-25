@@ -10,5 +10,6 @@ Package.on_use(function (api, where) {
 	api.use('accounts-base', ['server']);
 	api.use("alanning:roles@1.2.11", ['server']);
 
-	api.add_files('server/methods.js', ['server']);
+	api.add_files('server/methods/roles.js', ['server']);
+	api.add_files('server/methods/users.js', ['server']);
 });
