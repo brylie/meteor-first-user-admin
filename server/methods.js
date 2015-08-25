@@ -1,5 +1,5 @@
 Meteor.methods({
-  "createAdminRoleIfNotDefined": function (adminRole) {
+  "createAdminRoleIfNotDefined": function () {
     // TODO: Refactor this process to allow user to specify  admin role as parameter
     // E.g. a config page where the user can input the desired string
 
@@ -27,7 +27,7 @@ Meteor.methods({
       Roles.createRole(adminRole);
     }
   },
-  'addFirstUserToAdminRole': function (userId) {
+  'addFirstUserToAdminRole': function () {
     // Look for existing users and set initial user as admin if none exist
     Meteor.call('countUsers', function(error, userCount) {
       // If there is only one user
