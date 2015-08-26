@@ -2,7 +2,8 @@ accounts-base@1.2.0
 alanning:roles@1.2.13
 base64@1.0.3
 binary-heap@1.0.3
-brylie:first-admin@0.1.0
+brylie:create-role-if-undefined@0.1.0
+brylie:first-admin@0.1.1
 callback-hook@1.0.3
 check@1.0.5
 ddp@1.1.0
