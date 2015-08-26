@@ -7,10 +7,10 @@ Package.describe({
 
 Package.on_use(function (api, where) {
   api.versionsFrom("1.0.1");
-  api.use('accounts-base', 'server');
-  api.use("alanning:roles@1.2.11", 'server');
-  api.use("brylie:create-role-if-undefined@0.1.0", 'server');
+  api.use("accounts-base", "server");
+  api.use("alanning:roles@1.2.11", "server");
+  api.use("brylie:create-role-if-undefined@0.1.0", "server");
 
-  api.add_files('server/methods/roles.js', ['server']);
-  api.add_files('server/methods/users.js', ['server']);
+  api.add_files("server/methods/roles.js", "server");
+  api.add_files('server/methods/users.js', "server");
 });
