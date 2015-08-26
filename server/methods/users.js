@@ -1,14 +1,14 @@
 Meteor.methods({
-  'addFirstUserToAdminRole': function (adminRole) {
+  'addFirstUserToAdminRole': function () {
     /*
      Look for existing users and set initial user as admin
     */
 
     // Set default admin role if none provided
-    var adminRole = adminRole || 'admin';
+    var adminRoleName = Meteor.settings.adminRoleName || 'admin';
 
     // Create admin role if not existing
-    Meteor.call('createRoleIfNotExisting', adminRole);
+    Meteor.call('createRoleIfUndefined', adminRoleName);
 
     // Count registered users
     var userCount = Meteor.users().count();
@@ -22,13 +22,13 @@ Meteor.methods({
       var userRoles = Roles.getRolesForUser(user);
 
       // Check if current user is admin
-      var userIsAdmin = _.contains(userRoles, adminRole);
+      var userIsAdmin = _.contains(userRoles, adminRoleName);
 
       // If user is not admin
       if (!userIsAdmin) {
         // Add user to admin role
-        Roles.addUsersToRoles(userId, [adminRole]);
-        console.log("Added first user as admin.");
+        Roles.addUsersToRoles(userId, [adminRoleName]);
+        console.log("Added first user to ", adminRoleName, " role.");
       } else {
         console.log("First user already has admin role.")
       }
