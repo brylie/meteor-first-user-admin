@@ -36,7 +36,7 @@ Meteor.methods({
         Roles.addUsersToRoles(userId, [adminRoleName]);
         console.log("Added first user to ", adminRoleName, " role.");
       } else {
-        console.log("First user already has admin role.")
+        console.log("First user already has ", adminRoleName, " role.")
       }
     }
   }
