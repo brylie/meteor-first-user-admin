@@ -1,5 +1,5 @@
 Package.describe({
-  summary: "Methods to create admin role and add first admin user.",
+  summary: "Method to add first Meteor user to Admin Role.",
   version: "0.1.1",
   name: "brylie:first-admin",
   git: "https://github.com/brylie/meteor-first-user-admin"
